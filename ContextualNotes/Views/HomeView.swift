@@ -17,7 +17,14 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             List {
-                // Main CTA: Record meeting — single indicator when recording
+                // Glasses status card — first
+                Section {
+                    GlassesStatusCard(isConnected: env.metaDATService.isConnected)
+                }
+                .listRowBackground(Color.clear)
+                .listRowInsets(EdgeInsets(top: 4, leading: 16, bottom: 4, trailing: 16))
+
+                // Record meeting — single indicator when recording, accent styling
                 Section {
                     if recordingStatus == .recording && env.recordingService.isRecording {
                         // Recording: same slot, controls inline
@@ -72,7 +79,7 @@ struct HomeView: View {
                         .padding(.vertical, 12)
                         .padding(.horizontal, 4)
                     } else {
-                        // Default: Record meeting button
+                        // Default: Record meeting button — red, elegant shadow
                         Button {
                             showRecordSheet = true
                         } label: {
@@ -85,6 +92,7 @@ struct HomeView: View {
                                         .font(.system(size: 28))
                                         .foregroundStyle(.red)
                                 }
+                                .shadow(color: .black.opacity(0.08), radius: 6, x: 0, y: 2)
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text("Record meeting")
                                         .font(.title3.weight(.semibold))
@@ -101,18 +109,16 @@ struct HomeView: View {
                             .padding(.vertical, 12)
                             .padding(.horizontal, 4)
                         }
+                        .buttonStyle(.plain)
                         .disabled(env.recordingService.isRecording)
                     }
                 }
-                .listRowBackground(Color(.secondarySystemGroupedBackground))
+                .listRowBackground(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color(.secondarySystemGroupedBackground))
+                        .shadow(color: .black.opacity(0.06), radius: 8, x: 0, y: 2)
+                )
                 .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
-
-                // Glasses status card — sleek design with glasses image
-                Section {
-                    GlassesStatusCard(isConnected: env.metaDATService.isConnected)
-                }
-                .listRowBackground(Color.clear)
-                .listRowInsets(EdgeInsets(top: 4, leading: 16, bottom: 4, trailing: 16))
 
                 // Recent recordings
                 Section("Recent recordings") {

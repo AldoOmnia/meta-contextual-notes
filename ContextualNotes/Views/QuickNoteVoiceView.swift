@@ -10,11 +10,8 @@ struct QuickNoteVoiceView: View {
     @State private var statusText = "Tap to speak"
     @State private var audioRecorder: AVAudioRecorder?
     @State private var recordingURL: URL?
-    @State private var lastRecordedContent: String?
-
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 20) {
+        HStack(spacing: 20) {
                 Button {
                     if isRecording {
                         stopRecording()
@@ -43,21 +40,7 @@ struct QuickNoteVoiceView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-                Spacer(minLength: 0)
-            }
-
-            if let content = lastRecordedContent, !content.isEmpty {
-                HStack(alignment: .top, spacing: 8) {
-                    Image(systemName: "checkmark.circle.fill")
-                        .font(.callout)
-                        .foregroundStyle(.green)
-                    Text("Quick note recorded: \(content)")
-                        .font(.callout)
-                        .foregroundStyle(.secondary)
-                        .lineLimit(2)
-                }
-                .padding(.top, 4)
-            }
+            Spacer(minLength: 0)
         }
         .padding()
     }
@@ -72,32 +55,23 @@ struct QuickNoteVoiceView: View {
 
     private func stopRecording() {
         isRecording = false
-        statusText = "Saved. Tap to speak again."
+        statusText = "Saved"
         Task {
-            let content = await saveNoteFromRecording()
-            await MainActor.run {
-                lastRecordedContent = content
-                onSaved()
-            }
-            try? await Task.sleep(nanoseconds: 1_500_000_000)
-            await MainActor.run {
-                statusText = "Tap to speak"
-                lastRecordedContent = nil
-            }
+            await saveNoteFromRecording()
+            await MainActor.run { onSaved() }
+            try? await Task.sleep(nanoseconds: 1_200_000_000)
+            await MainActor.run { statusText = "Tap to speak" }
         }
     }
 
-    private func saveNoteFromRecording() async -> String? {
+    private func saveNoteFromRecording() async {
         // Placeholder: save note with transcript
         // TODO: Transcribe audio → use real transcription
         do {
-            let note = try await env.noteCaptureService.capture(
+            _ = try await env.noteCaptureService.capture(
                 content: "Voice note recorded",  // Replace with transcription
                 type: .voiceMemo
             )
-            return note.content
-        } catch {
-            return nil
-        }
+        } catch { }
     }
 }
