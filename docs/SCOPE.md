@@ -4,16 +4,22 @@
 
 ### Purpose
 
-Contextual Notes is a Meta AI Glasses app that captures notes with context (voice, location, time, and optional triggers) and surfaces them when that context is relevant.
+Contextual Notes is a Meta AI Glasses app with a **hybrid model**:
+- **Primary:** Meeting recorder — capture multi-speaker conversations with optional video and transcript
+- **Secondary:** Contextual notes — quick memos with location/time triggers
 
 ### Target Device
 
 - Meta AI Glasses (Ray-Ban Meta)
 - iOS companion app (Swift, SwiftUI, Meta DAT SDK)
 
-### Differentiation
+### Primary CTA
 
-Notes are tied to context (place, time, conversation, commute) so reminders and recall are situation-aware instead of static.
+**Record meeting** — users record meetings (with or without video), get transcript with speaker identification, and can export both recording and transcript.
+
+### Secondary: Contextual Notes
+
+Notes are tied to context (place, time, conversation) so reminders and recall are situation-aware.
 
 ## 2. User Stories
 

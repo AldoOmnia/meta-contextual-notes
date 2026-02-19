@@ -18,7 +18,7 @@ A Meta AI Glasses (Ray-Ban Meta) companion app that captures notes with rich con
 
 | Component | Technology |
 |-----------|------------|
-| Platform | iOS 15.2+ |
+| Platform | iOS 17.0+ |
 | Language | Swift 6 |
 | UI | SwiftUI |
 | Glasses | Meta Wearables DAT SDK |
@@ -52,11 +52,22 @@ meta-contextual-notes/
 
 ## Getting Started
 
-1. Clone the repository
-2. Open in Xcode (create a new iOS app project or use existing)
-3. Add Meta Wearables DAT SDK dependency
-4. Configure location and microphone permissions in `Info.plist`
-5. Run on device (glasses pairing requires physical hardware)
+1. **Generate Xcode project** (requires [XcodeGen](https://github.com/yonaskolb/XcodeGen)):
+   ```bash
+   brew install xcodegen
+   xcodegen generate
+   ```
+2. Open `ContextualNotes.xcodeproj` in Xcode
+3. Select your development team in Signing & Capabilities (for device runs)
+4. Add Meta Wearables DAT SDK dependency when available
+5. Run on Simulator or device (glasses pairing requires physical hardware)
+
+## Branding
+
+Shared branding with other Omnia Meta glasses apps:
+- **Glasses** / **RayBanGlasses** — Ray-Ban Meta imagery (from [Meta-Browser-Commerce](https://github.com/AldoOmnia/Meta-Browser-Commerce), [CTA Transit Assistant](https://github.com/AldoOmnia/mobile_Meta_app_CTA_smart_glasses))
+- **OmniaLogo** — "Powered by Omnia" footer
+- **AppTheme** — Dark theme, accent colors, typography (aligned with CTA & Browser Commerce)
 
 ## Documentation
 
