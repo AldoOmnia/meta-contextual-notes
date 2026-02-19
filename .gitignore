@@ -1,0 +1,47 @@
+# Xcode
+xcuserdata/
+*.xcuserstate
+*.xcworkspace
+# Keep .xcodeproj - we want to track the project file
+
+# Build
+DerivedData/
+.build/
+*.hmap
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# CocoaPods
+Pods/
+*.xcworkspace
+
+# Carthage
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Environment
+.env
+.env.local
+*.xcconfig.local
