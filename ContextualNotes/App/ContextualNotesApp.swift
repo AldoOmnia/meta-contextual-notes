@@ -7,6 +7,11 @@ struct ContextualNotesApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(env: env)
+                .onOpenURL { url in
+                    Task {
+                        await env.metaDATService.handleURL(url)
+                    }
+                }
         }
     }
 }

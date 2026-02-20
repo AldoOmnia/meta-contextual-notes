@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -264,7 +264,6 @@
 			packageReferences = (
 				D618EA3356E3BDFF8801C3A6 /* XCRemoteSwiftPackageReference "meta-wearables-dat-ios" */,
 			);
-			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
