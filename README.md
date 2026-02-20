@@ -1,5 +1,9 @@
 # Meta Contextual Notes
 
+<p align="center">
+  <img src="assets/logo.png" alt="Meta Contextual Notes" width="128">
+</p>
+
 **Context-aware notes for Meta AI Glasses — capture with voice, location, and time; recall when context matches.**
 
 ---
