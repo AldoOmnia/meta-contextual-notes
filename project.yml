@@ -6,11 +6,22 @@ options:
   xcodeVersion: "15.0"
   generateEmptyDirectories: true
 
+packages:
+  meta-wearables-dat-ios:
+    url: https://github.com/facebook/meta-wearables-dat-ios
+    from: 0.4.0
+
 targets:
   ContextualNotes:
     type: application
     platform: iOS
     deploymentTarget: "17.0"
+    dependencies:
+      - package: meta-wearables-dat-ios
+        products:
+          - MWDATCamera
+          - MWDATCore
+          - MWDATMockDevice
     sources:
       - path: ContextualNotes
         excludes:

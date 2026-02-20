@@ -21,12 +21,14 @@
 		50055F23DCA9D323170CBCBA /* NoteCaptureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C8AACEC4752F14B77A5C63 /* NoteCaptureService.swift */; };
 		53E4D1F22905CC0B30CC4D9D /* RecordMeetingSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7483946C7C0FC4F7EAD78E6 /* RecordMeetingSheet.swift */; };
 		5493266476BB12091BB49BB9 /* PairingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3106D43D8DA1D74CDC9FBC4 /* PairingView.swift */; };
+		5CB0FA701A2A017E84997E2C /* MWDATMockDevice in Frameworks */ = {isa = PBXBuildFile; productRef = A38EDB6C2C6C2CC86F548017 /* MWDATMockDevice */; };
 		5F67B06CDF2779E4FEE84833 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4D95354FA2BAAC7980499 /* Note.swift */; };
 		5FB5068F0E5C29E7F6AE769D /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6E2DE5F0C81EEFD5BB7D4C /* Trigger.swift */; };
 		65936F6B31438B7221C56980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678548E2A2BABE44252B8499 /* Assets.xcassets */; };
 		68269AFCEE1ABBA21178BC89 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC964ACB36AF9A48E916D95 /* AppEnvironment.swift */; };
 		71846878C7736AE516EDDDD4 /* TriggerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8DC28D4AD4B0163231F237 /* TriggerType.swift */; };
 		79DB48944F31A6B994596851 /* ActiveRecordingSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA2343E2C830934D9408449 /* ActiveRecordingSheet.swift */; };
+		7AF0C3EE9C3B6A6279019A98 /* MWDATCamera in Frameworks */ = {isa = PBXBuildFile; productRef = A999FC6D5069D41A73A1175B /* MWDATCamera */; };
 		7B3F3563B8276BDAA8BC4E02 /* MeetingRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566E05B6CE7D7F7E7FEE87D1 /* MeetingRecording.swift */; };
 		7EAB04B8246479606D240202 /* VoiceWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C1DBB8A63252B62E6FBF1 /* VoiceWaveView.swift */; };
 		81B7D4A3FB192BBD32C30CFD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FC39C03377EA92B422AA5A /* HomeView.swift */; };
@@ -39,6 +41,7 @@
 		B59FFCE24F34C2D975AB9E6D /* TriggerMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C0D1DBA6FA8D44755BC3EF /* TriggerMonitor.swift */; };
 		B84F9B39D565B9054E9F2C29 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631003B01BC834600A128621 /* OnboardingView.swift */; };
 		B95FA66C511ACEBD7C123FC2 /* PostPairingIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AECDEDEDDFCD389367781C /* PostPairingIntroView.swift */; };
+		BAF1168B234C666015C9401E /* MWDATCore in Frameworks */ = {isa = PBXBuildFile; productRef = 382191687EB606F499BCC0EB /* MWDATCore */; };
 		DCF26532ACF26A41DD85ED32 /* AppIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129E0D7EE9227D5B89D9B659 /* AppIntroView.swift */; };
 		E730621C235C2D06E6B988C5 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9D6B674E3825933996D443 /* LocationService.swift */; };
 		F68D20F61C8D1DA6F6C53F06 /* RecordingContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7568976C4DFC1B2562B5F /* RecordingContext.swift */; };
@@ -85,6 +88,19 @@
 		F184F6B9D432799357CED795 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F300BBF7F9DDC7084C2A9C32 /* QuickNoteVoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNoteVoiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0A0CEC46C30ABB6A127DB76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AF0C3EE9C3B6A6279019A98 /* MWDATCamera in Frameworks */,
+				BAF1168B234C666015C9401E /* MWDATCore in Frameworks */,
+				5CB0FA701A2A017E84997E2C /* MWDATMockDevice in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		1F63E6EBB1B2E73AE42DB5A7 = {
@@ -204,6 +220,7 @@
 			buildPhases = (
 				74DE08D6C7335E3AA78A309B /* Sources */,
 				CF2131B338B00714E3947192 /* Resources */,
+				D0A0CEC46C30ABB6A127DB76 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -211,6 +228,9 @@
 			);
 			name = ContextualNotes;
 			packageProductDependencies = (
+				A999FC6D5069D41A73A1175B /* MWDATCamera */,
+				382191687EB606F499BCC0EB /* MWDATCore */,
+				A38EDB6C2C6C2CC86F548017 /* MWDATMockDevice */,
 			);
 			productName = ContextualNotes;
 			productReference = 8FC4A94B4AB6D65E8819AC0A /* ContextualNotes.app */;
@@ -241,6 +261,9 @@
 			);
 			mainGroup = 1F63E6EBB1B2E73AE42DB5A7;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D618EA3356E3BDFF8801C3A6 /* XCRemoteSwiftPackageReference "meta-wearables-dat-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
@@ -490,6 +513,35 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D618EA3356E3BDFF8801C3A6 /* XCRemoteSwiftPackageReference "meta-wearables-dat-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/meta-wearables-dat-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		382191687EB606F499BCC0EB /* MWDATCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D618EA3356E3BDFF8801C3A6 /* XCRemoteSwiftPackageReference "meta-wearables-dat-ios" */;
+			productName = MWDATCore;
+		};
+		A38EDB6C2C6C2CC86F548017 /* MWDATMockDevice */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D618EA3356E3BDFF8801C3A6 /* XCRemoteSwiftPackageReference "meta-wearables-dat-ios" */;
+			productName = MWDATMockDevice;
+		};
+		A999FC6D5069D41A73A1175B /* MWDATCamera */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D618EA3356E3BDFF8801C3A6 /* XCRemoteSwiftPackageReference "meta-wearables-dat-ios" */;
+			productName = MWDATCamera;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 42E5068C67F63E5DFC69EB71 /* Project object */;
 }
